@@ -1,0 +1,25 @@
+/*
+Given two strings s and t, return true if t is an anagram of s, and false otherwise.
+An Anagram is a word or phrase formed by rearranging the letters of a different word or phrase, typically using all the original letters exactly once.
+Example 1:
+Input: s = "anagram", t = "nagaram"
+Output: true
+
+Example 2:
+Input: s = "rat", t = "car"
+Output: false
+
+Constraints:
+1 <= s.length, t.length <= 5 * 104
+s and t consist of lowercase English letters.
+
+Using HashMap:- two anagram(S, T)
+ s     T
+a 3   a 3
+n 1   n 1
+g 1   g 1
+r 1   r 1
+m 1   m 1
+comparing each values.
+
+*/
