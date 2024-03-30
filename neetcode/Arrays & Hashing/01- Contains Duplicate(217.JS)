@@ -41,13 +41,49 @@ var containsDuplicate = function(nums) {
     return false;
 };
 
-// time complexity: O(n) where n is the length of nums
-// space complexity: O(n) where n is the length of nums
+     // time complexity: O(n) where n is the length of nums
+     // space complexity: O(n) where n is the length of nums
+     
+     //create new numSet
+     //Loop through nums
+     //     i. if numSet has current nums
+     //        return true
+     //     ii.add current nums to numSet
+     //return false
+----------------------------------------------------------------------------------------------------------------------
+UserInput Examples:-
+const readline = require('readline');
 
-//create new numSet
-//Loop through nums
-//     i. if numSet has current nums
-//        return true
-//     ii.add current nums to numSet
-//return false
+const rl = readline.createInterface({
+  input: process.stdin,
+  output: process.stdout
+});
 
+// Function to check for duplicates in an array
+const containsDuplicate = function(nums) {
+    const numSet = new Set();
+    for(let i = 0; i < nums.length; i++) {
+        if(numSet.has(nums[i])) {
+            return true;
+        }
+        numSet.add(nums[i]);
+    }
+    return false;
+};
+
+rl.question('Enter the array of integers separated by commas: ', (input) => {
+  // Parse the input string into an array of integers
+  const nums = input.split(',').map(Number);
+  
+  // Call the containsDuplicate function with the input array
+  const result = containsDuplicate(nums);
+  
+  // Output the result
+  console.log(`Output: ${result}`);
+
+  rl.close();
+});
+
+OutPut:-
+Enter the array of integers separated by commas: 1,2,3,4,1
+Output: true
