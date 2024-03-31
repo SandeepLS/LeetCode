@@ -76,3 +76,39 @@ The code uses a HashMap-like approach to count the occurrences of characters in 
 ensuring that each character appears the same number of times in both strings for them to be considered anagrams. 
 This approach has a time complexity of O(n), where n is the length of the input strings s and t.
 */
+------------------------------------------------------------------------------------------------------------------------------------------------------
+const readline = require('readline');
+
+const rl = readline.createInterface({
+  input: process.stdin,
+  output: process.stdout
+});
+
+// Function to check if t is an anagram of s
+var isAnagram = function(s, t) {
+    if (s.length !== t.length) return false;
+    const sCount = {};
+    const tCount = {};
+    const N = s.length;
+    for (let i = 0; i < N; i++) {
+        if (!sCount[s[i]]) sCount[s[i]] = 0;
+        if (!tCount[t[i]]) tCount[t[i]] = 0;
+        sCount[s[i]]++;
+        tCount[t[i]]++;
+    }
+    for (let ch in sCount) {
+        if (sCount[ch] !== tCount[ch]) return false;
+    }
+    return true;
+};
+
+rl.question('Enter string s: ', (sInput) => {
+    rl.question('Enter string t: ', (tInput) => {
+        const result = isAnagram(sInput, tInput);
+        console.log(`Output: ${result}`);
+        rl.close();
+    });
+});
+Enter string s: san
+Enter string t: nas
+Output: true
