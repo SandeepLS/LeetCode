@@ -47,8 +47,10 @@ var isAnagram = function(s, t) {
     if (sCount[ch] !== tCount[ch]) return false;
   }
   return true;
-
 };
+const result = isAnagram("san", "nas");
+console.log(result);
+
 
 /*
 The function first checks if the lengths of the two input strings s and t are not equal. 
