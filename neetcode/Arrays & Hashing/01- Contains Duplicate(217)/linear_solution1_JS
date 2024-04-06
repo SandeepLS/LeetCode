@@ -52,7 +52,7 @@ console.log(result);
      //     i. if numSet has current nums
      //        return true
      //     ii.add current nums to numSet
-     //return false
+     //return false:- If the loop completes without finding any duplicates (i.e., all numbers in the array are unique), the function returns false.
 ----------------------------------------------------------------------------------------------------------------------
 UserInput Examples:-
 const readline = require('readline');
