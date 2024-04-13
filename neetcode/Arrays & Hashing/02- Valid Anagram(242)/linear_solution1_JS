@@ -93,7 +93,7 @@ var isAnagram = function(s, t) {
     const tCount = {};
     const N = s.length;
     for (let i = 0; i < N; i++) {
-        if (!sCount[s[i]]) sCount[s[i]] = 0;
+        if (!sCount[s[i]]) sCount[s[i]] = 0;   //if s[i] value, is not in sCount object, then we should initialize it to 0.
         if (!tCount[t[i]]) tCount[t[i]] = 0;
         sCount[s[i]]++;
         tCount[t[i]]++;
