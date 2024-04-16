@@ -1,0 +1,19 @@
+https://www.youtube.com/watch?v=kVTirl9VXTc
+/**
+Ex: [2,3,4,5]
+
+division: 
+120
+[60,40,30,24]
+
+prefix & sufix:-
+prefix: [1,2,6,24]
+sufix: [60,20,5,1]
+result:[60,40,30,24]
+
+TC:O(n)
+SC:O(n)
+if we reduce the SC, yes we can
+TC:O(n) =>Linear
+SC:O(1) =>constant
+ */
