@@ -1,5 +1,3 @@
-https://www.youtube.com/watch?v=kVTirl9VXTc
-
 var productExceptSelf = function(nums) {
     let res = [1];
 
