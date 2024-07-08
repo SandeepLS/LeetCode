@@ -18,22 +18,28 @@ Ex:-
 //lowercase string.toLowerCase()
 //check if palindrom
 
- const check = (s) =>{      //check if palindrom
-
+const check = (s) => { // Check if the string is a palindrome, //Arrow function
     let l = 0;
-    let r = s.length-1;
-    while(l<=r){
-        if(s[l]===s[r]){
+    let r = s.length - 1;
+    while (l <= r) {
+        if (s[l] === s[r]) {
             l++;
             r--;
-        }else{
+        } else {
             return false;
         }
     }
-    return true
- }
-var isPalindrome = function(s) {
-    const regex = /[^a-zA-Z0-9]/g       //it will catch everything(globaly) in string
-    const clean = s.replace(regex, '').toLowerCase();
+    return true;
+};
+
+var isPalindrome = function(s) { //Normal Function expression
+    const regex = /[^a-zA-Z0-9]/g; // Regular expression to catch non-alphanumeric characters
+    const clean = s.replace(regex, '').toLowerCase(); // Clean and convert to lowercase
     return check(clean);
 };
+
+// Test cases
+console.log(isPalindrome("A man, a plan, a canal: Panama")); // true
+console.log(isPalindrome("racecar")); // true
+console.log(isPalindrome("hello")); // false
+console.log(isPalindrome("No 'x' in Nixon")); // true
